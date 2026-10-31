@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="An infographic website about global recycling and recycling in Malaysia.">
+  <title>The Life of Waste | Recycling Infographics</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="The Life of Waste home">
+      <span class="brand-icon" aria-hidden="true">♻</span>
+      <span>THE LIFE OF WASTE</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu ☰</button>
+    <nav id="site-nav" class="nav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active" aria-current="page">Home</a>
+      <a href="#global" class="nav-link">Global</a>
+      <a href="#malaysia" class="nav-link">Malaysia</a>
+      <a href="#impacts" class="nav-link">Impacts</a>
+      <a href="#actions" class="nav-link">Take Action</a>
+      <a href="#feedback" class="nav-link">Feedback</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">GLOBAL × MALAYSIA / RECYCLING</p>
+          <h1>Waste has a story.<br><em>Let's rethink it.</em></h1>
+          <p class="lead">Where does our waste go? Explore the numbers, the environmental impacts, and the everyday changes that matter.</p>
+          <a href="#global" class="button button-light">Explore the facts <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-outer"></div>
+          <div class="orbit orbit-inner"></div>
+          <div class="planet">♻</div>
+          <span class="orbit-word orbit-word-a">REDUCE</span>
+          <span class="orbit-word orbit-word-b">REUSE</span>
+          <span class="orbit-word orbit-word-c">RECYCLE</span>
+        </div>
+      </div>
+
+      <div class="section-heading"><p class="eyebrow">THE BIG PICTURE</p><h2>Three numbers worth knowing</h2></div>
+      <div class="stats-grid">
+        <article class="stat-card"><p class="stat-number">2.1B</p><p>tonnes of municipal waste worldwide in 2023</p><small>UNEP · 2023 estimate</small></article>
+        <article class="stat-card"><p class="stat-number">9%</p><p>of global plastic waste ultimately recycled in 2019</p><small>OECD · 2019 data</small></article>
+        <article class="stat-card"><p class="stat-number">37.9%</p><p>Malaysia's national recycling rate in 2024</p><small>OpenDOSM · 2024 data</small></article>
+      </div>
+    </section>
+
+    <section id="global" class="page" hidden>
+      <div class="section-heading"><p class="eyebrow">01 / THE WORLD</p><h2>A global waste problem</h2><p>Waste is growing worldwide, and recycling alone cannot solve it.</p></div>
+      <div class="two-column">
+        <article class="panel">
+          <p class="eyebrow">MUNICIPAL WASTE · 2023</p>
+          <p class="huge-number">2.1 <span>billion tonnes</span></p>
+          <p>Estimated municipal solid waste generated worldwide in 2023.</p>
+          <a class="source" href="https://www.unep.org/en/publications/report/global-waste-management-outlook-2024" target="_blank" rel="noopener noreferrer">Source: UNEP, Global Waste Management Outlook 2024 ↗</a>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">PLASTIC WASTE · 2019</p>
+          <div class="donut-row"><div class="donut" role="img" aria-label="9 percent of global plastic waste was ultimately recycled in 2019"><span>9%<small>recycled</small></span></div>
+          <p>Only 9% of global <strong>plastic waste</strong> was ultimately recycled in 2019. The remainder was landfilled, incinerated or mismanaged.</p></div>
+          <a class="source" href="https://www.oecd.org/en/publications/global-plastics-outlook_de747aef-en/full-report/component-6.html" target="_blank" rel="noopener noreferrer">Source: OECD, Global Plastics Outlook ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="malaysia" class="page" hidden>
+      <div class="section-heading"><p class="eyebrow">02 / CLOSER TO HOME</p><h2>Recycling in Malaysia</h2><p>Explore how the reported national recycling rate has changed.</p></div>
+      <div class="two-column">
+        <article class="panel chart-panel">
+          <p class="eyebrow">NATIONAL RECYCLING RATE</p>
+          <p class="chart-value"><output id="rate-output" for="year-select">37.9%</output><span id="year-output">2024</span></p>
+          <div class="bar-track" role="img" aria-label="Recycling rate visualized on a 0 to 100 percent scale"><div id="rate-bar" class="bar-fill"></div></div>
+          <label class="input-label" for="year-select">Choose a year</label>
+          <select id="year-select">
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024" selected>2024</option>
+          </select>
+          <small class="axis-note">Bar scale: 0% to 100%</small>
+        </article>
+        <article class="panel malaysia-fact">
+          <p class="eyebrow">MATERIAL RECYCLED · 2024</p>
+          <p class="huge-number">5.40 <span>million tonnes</span></p>
+          <p>Reported total recycled material in Malaysia during 2024.</p>
+          <p class="extra-fact">In 2014, the national recycling rate was <strong>13.2%</strong>.</p>
+        </article>
+      </div>
+      <p class="note">Data: Department of Statistics Malaysia / OpenDOSM, national recycling rate dataset (2014–2024). <a href="https://open.dosm.gov.my/data-catalogue/sdg_12-5-1" target="_blank" rel="noopener noreferrer">View original data ↗</a></p>
+    </section>
+
+    <section id="impacts" class="page" hidden>
+      <div class="section-heading"><p class="eyebrow">03 / WHY IT MATTERS</p><h2>The real cost of waste</h2><p>Improperly managed waste affects ecosystems, our climate, and valuable resources.</p></div>
+      <div class="impact-grid">
+        <article class="impact-card"><span class="impact-icon" aria-hidden="true">≈</span><h3>Water & wildlife</h3><p>Plastic pollution can reach rivers and oceans, where it can entangle wildlife or be mistaken for food.</p></article>
+        <article class="impact-card"><span class="impact-icon" aria-hidden="true">◉</span><h3>Climate</h3><p>Organic waste decomposing in landfills can release methane, a greenhouse gas.</p></article>
+        <article class="impact-card"><span class="impact-icon" aria-hidden="true">↻</span><h3>Natural resources</h3><p>Making products from recovered materials can reduce the need for some virgin raw materials.</p></article>
+      </div>
+    </section>
+
+    <section id="actions" class="page" hidden>
+      <div class="section-heading"><p class="eyebrow">04 / SMALL ACTIONS</p><h2>Reduce. Reuse. Recycle.</h2><p>Preventing waste comes first. When recycling, check what your local collection programme accepts.</p></div>
+      <div class="steps-grid">
+        <article class="step"><span>01</span><h3>Reduce</h3><p>Avoid unnecessary packaging and single-use purchases.</p></article>
+        <article class="step"><span>02</span><h3>Reuse</h3><p>Repair, donate or refill usable items before discarding them.</p></article>
+        <article class="step"><span>03</span><h3>Recycle</h3><p>Sort accepted, clean and dry recyclables according to local rules.</p></article>
+      </div>
+      <div class="panel sorting-panel">
+        <div><p class="eyebrow">INTERACTIVE GUIDE</p><h3>Choose a material</h3><p>Click a material to see a basic recycling tip.</p></div>
+        <div><div class="material-buttons" aria-label="Choose a material">
+          <button type="button" class="material-button selected" data-material="paper">Paper</button>
+          <button type="button" class="material-button" data-material="plastic">Plastic</button>
+          <button type="button" class="material-button" data-material="metal">Metal</button>
+          <button type="button" class="material-button" data-material="glass">Glass</button>
+        </div><p id="material-tip" class="material-tip" role="status">Keep recyclable paper clean and dry; food-soiled paper may not be accepted.</p></div>
+      </div>
+    </section>
+
+    <section id="feedback" class="page" hidden>
+      <div class="section-heading"><p class="eyebrow">05 / YOUR VOICE</p><h2>What do you think?</h2><p>Tell us whether this website helped you understand recycling.</p></div>
+      <form id="feedback-form" class="feedback-form">
+        <label for="visitor-name">Your name (optional)</label>
+        <input type="text" id="visitor-name" maxlength="60" placeholder="Enter your name">
+        <label for="visitor-rating">Website rating</label>
+        <select id="visitor-rating" required><option value="">Choose one</option><option value="5">5 — Excellent</option><option value="4">4 — Good</option><option value="3">3 — Okay</option><option value="2">2 — Needs improvement</option><option value="1">1 — Poor</option></select>
+        <label for="visitor-comment">Your feedback</label>
+        <textarea id="visitor-comment" required minlength="10" maxlength="500" placeholder="What did you learn? What could be improved?"></textarea>
+        <button class="button button-dark" type="submit">Save feedback</button>
+        <p id="feedback-message" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <strong>THE LIFE OF WASTE</strong>
+    <p class="footer-links"><a href="https://www.unep.org/en/publications/report/global-waste-management-outlook-2024" target="_blank" rel="noopener noreferrer">UNEP</a> · <a href="https://www.oecd.org/en/publications/global-plastics-outlook_de747aef-en/full-report/component-6.html" target="_blank" rel="noopener noreferrer">OECD</a> · <a href="https://open.dosm.gov.my/data-catalogue/sdg_12-5-1" target="_blank" rel="noopener noreferrer">OpenDOSM</a></p>
+  </footer>
+</body>
+</html>
